@@ -2,7 +2,7 @@
 
 호텔관광 · CS · 커리어 강사 **딘쌤 홍상의**의 퍼스널 브랜딩 페이지입니다.
 
-### 🌐 https://deanssaem-test.vercel.app
+### 🌐 https://careerbuilder-dean.vercel.app
 
 > 대표 주소는 Vercel입니다. GitHub Pages(https://hseui87-crypto.github.io/deanssaem-test/)에도
 > 동일한 내용이 배포되지만, `canonical`이 Vercel을 가리키므로 검색 결과에는 Vercel 주소가 노출됩니다.
