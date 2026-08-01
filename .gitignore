@@ -1,0 +1,14 @@
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# 편집기
+.vscode/
+.idea/
+*.swp
+
+# 개인 원본 자료 (실수로 커밋되지 않도록)
+*.hwp
+*.pdf
+*.psd
