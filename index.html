@@ -380,6 +380,17 @@ h1.hero-title em::after{
   border-radius:12px; padding:22px 26px; font-size:13.5px; line-height:2; color:rgba(255,255,255,.7);
 }
 .job-note b{ color:var(--gold); display:block; margin-bottom:6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; }
+.exp-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:18px; }
+.exp{
+  display:flex; align-items:flex-start; gap:13px;
+  background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.1);
+  border-radius:12px; padding:18px;
+  transition:border-color .3s, transform .3s;
+}
+.exp:hover{ border-color:rgba(201,162,75,.45); transform:translateY(-3px); }
+.exp-ico{ font-size:21px; flex:none; line-height:1.2; }
+.exp b{ display:block; font-size:13.5px; font-weight:700; color:#fff; margin-bottom:4px; letter-spacing:-.01em; }
+.exp span{ font-size:12px; color:rgba(255,255,255,.62); line-height:1.65; }
 
 /* ══════════════════ 활동 ══════════════════ */
 .act-grid{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(30px,5vw,56px); align-items:start; }
@@ -506,7 +517,7 @@ html.js .reveal.in{ opacity:1; transform:none; }
   .about-visual img{ width:min(240px,70%); }
   .num-grid{ grid-template-columns:1fr 1fr; }
   .award-grid{ grid-template-columns:1fr; }
-  .cred-grid{ grid-template-columns:repeat(2,1fr); }
+  .cred-grid, .exp-grid{ grid-template-columns:repeat(2,1fr); }
   .req-grid{ grid-template-columns:1fr; }
   .book-cover{ transform:none; }
 }
@@ -525,7 +536,7 @@ html.js .reveal.in{ opacity:1; transform:none; }
   .nav-menu a::after{ display:none; }
   .nav-cta{ display:none; }
   section{ padding:56px 0; }
-  .lect-grid, .job-grid, .num-grid{ grid-template-columns:1fr; }
+  .lect-grid, .job-grid, .num-grid, .exp-grid{ grid-template-columns:1fr; }
   .hero-btns .btn{ flex:1 1 100%; justify-content:center; }
   .act-list li{ flex-wrap:wrap; gap:8px; }
 }
@@ -868,6 +879,14 @@ html.js .reveal.in{ opacity:1; transform:none; }
         <p class="job-desc">Concierge · Front Desk · Executive Lounge 전 포지션 수행</p>
       </article>
     </div>
+
+    <p class="award-title reveal">핵심 현장 경험</p>
+    <div class="exp-grid">
+      <div class="exp reveal"><span class="exp-ico" aria-hidden="true">🔨</span><div><b>두 차례 리노베이션 경험</b><span>재직 기간 중 호텔 리노베이션을 두 번 현장에서 직접 경험</span></div></div>
+      <div class="exp reveal"><span class="exp-ico" aria-hidden="true">🌍</span><div><b>글로벌 체인 · 로컬 호텔 모두 경험</b><span>특급 글로벌 체인호텔과 로컬 중소형 호텔 근무 이력</span></div></div>
+      <div class="exp reveal"><span class="exp-ico" aria-hidden="true">🔑</span><div><b>호텔 오프닝 멤버</b><span>신규 호텔 오픈 세팅 · 운영 총괄 참여</span></div></div>
+    </div>
+
     <div class="job-note reveal">
       <b>강의 경력</b>
       한양여자대학교 · 경민대학교 · 한국호텔관광실용전문학교<br>
