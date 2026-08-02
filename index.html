@@ -467,7 +467,7 @@ h1.hero-title em::after{
     var(--ink);
   color:#fff; text-align:center;
 }
-.req-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:0 auto clamp(36px,5vw,48px); text-align:left; }
+.req-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin:0 auto clamp(36px,5vw,48px); text-align:left; max-width:640px; }
 .req{
   background:rgba(255,255,255,.045); border:1px solid rgba(255,255,255,.11);
   border-radius:var(--r); padding:28px 26px; transition:border-color .3s, transform .3s;
@@ -1020,12 +1020,6 @@ html.js .reveal.in{ opacity:1; transform:none; }
       <p class="sec-lead">강의 · 컨설팅 주제 · 대상 · 일정을 알려주시면 맞춤 프로그램을 설계해 드립니다.</p>
     </div>
     <div class="req-grid">
-      <article class="req reveal">
-        <div class="req-ico" aria-hidden="true">🏢</div>
-        <h3>기업 출강</h3>
-        <p>CS · 리더십 · 세일즈 · 조직 소통</p>
-        <span>반일 ~ 1일 워크숍</span>
-      </article>
       <article class="req reveal">
         <div class="req-ico" aria-hidden="true">🎓</div>
         <h3>대학 · 기관 특강</h3>
