@@ -358,6 +358,19 @@ h1.hero-title em::after{
   border-radius:12px; padding:22px 26px; font-size:13.5px; line-height:2; color:rgba(255,255,255,.7);
 }
 .job-note b{ color:var(--gold); display:block; margin-bottom:6px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; }
+.job-note b:not(:first-child){ margin-top:18px; }
+.subject-tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+.subject-tag{
+  font-size:12.5px; font-weight:600; color:var(--gold-lt);
+  background:rgba(255,255,255,.05); border:1px solid rgba(201,162,75,.32);
+  padding:6px 14px; border-radius:999px;
+}
+.exp-badges{ display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 18px; }
+.exp-badge{
+  font-size:12px; font-weight:700; color:var(--gold-lt);
+  background:rgba(201,162,75,.1); border:1px solid rgba(201,162,75,.35);
+  padding:6px 14px; border-radius:999px;
+}
 .exp-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:18px; }
 .exp{
   display:flex; align-items:flex-start; gap:13px;
@@ -846,17 +859,33 @@ html.js .reveal.in{ opacity:1; transform:none; }
       </article>
     </div>
 
-    <p class="award-title reveal">핵심 현장 경험</p>
+    <p class="award-title reveal">핵심 실무 경험</p>
+    <div class="exp-badges reveal">
+      <span class="exp-badge">호텔 경력 10년</span>
+      <span class="exp-badge">리노베이션 2회</span>
+      <span class="exp-badge">Pre-opening 프로젝트 수행</span>
+    </div>
     <div class="exp-grid">
-      <div class="exp reveal"><span class="exp-ico" aria-hidden="true">🌍</span><div><b>글로벌 체인 · 로컬 호텔</b><span>글로벌 체인 · 로컬 호텔 운영 경험</span></div></div>
-      <div class="exp reveal"><span class="exp-ico" aria-hidden="true">🔨</span><div><b>호텔 리노베이션 2회</b><span>두 차례 호텔 리노베이션 프로젝트 수행</span></div></div>
-      <div class="exp reveal"><span class="exp-ico" aria-hidden="true">🏨</span><div><b>인수 · Pre-opening 총괄</b><span>호텔 인수 후 리노베이션 및 Pre-opening 운영체계 구축 총괄</span></div></div>
+      <div class="exp reveal"><span class="exp-ico" aria-hidden="true">🌍</span><div><b>글로벌 체인 · 로컬 호텔</b><span>글로벌 체인과 로컬 호텔 운영 경험</span></div></div>
+      <div class="exp reveal"><span class="exp-ico" aria-hidden="true">🔨</span><div><b>호텔 리노베이션 2회</b><span>리브랜딩 및 운영 전환 프로젝트 수행</span></div></div>
+      <div class="exp reveal"><span class="exp-ico" aria-hidden="true">🏨</span><div><b>인수 · Pre-opening 총괄</b><span>호텔 인수·리노베이션·운영체계 구축 총괄</span></div></div>
     </div>
 
     <div class="job-note reveal">
-      <b>강의 경력</b>
-      한양여자대학교 · 경민대학교 · 한국호텔관광실용전문학교<br>
-      — 호텔경영마케팅, 호텔경영론, 호텔객실실무, 호텔현관객실실무, 호텔사례연구, 관광자원론, 호텔음료서비스실무, 호텔 부대업장 서비스 실무, 호텔접객서비스영어
+      <b>출강 기관</b>
+      한양여자대학교 · 경민대학교 · 한국호텔관광실용전문학교
+      <b>담당 과목</b>
+      <div class="subject-tags">
+        <span class="subject-tag">호텔경영마케팅</span>
+        <span class="subject-tag">호텔경영론</span>
+        <span class="subject-tag">호텔객실실무</span>
+        <span class="subject-tag">호텔현관객실실무</span>
+        <span class="subject-tag">호텔사례연구</span>
+        <span class="subject-tag">호텔음료서비스실무</span>
+        <span class="subject-tag">호텔부대업장서비스실무</span>
+        <span class="subject-tag">호텔접객서비스영어</span>
+        <span class="subject-tag">관광자원해설</span>
+      </div>
     </div>
   </div>
 </section>
