@@ -470,10 +470,19 @@ h1.hero-title em::after{
 .req span{ display:inline-block; margin-top:12px; font-size:11.5px; font-weight:600; color:var(--gold); letter-spacing:.04em; }
 .contact-btns{ display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-bottom:14px; }
 .contact-note{ text-align:center; font-size:13px; color:rgba(255,255,255,.5); margin-bottom:26px; }
-.contact-lines{ display:flex; flex-wrap:wrap; gap:10px 32px; justify-content:center; font-size:14px; color:rgba(255,255,255,.74); }
-.contact-lines a{ color:rgba(255,255,255,.75); text-decoration:none; transition:color .2s; }
-.contact-lines a:hover{ color:var(--gold); }
-.contact-lines b{ color:var(--gold); font-weight:700; margin-right:6px; }
+.contact-lines{
+  display:flex; flex-wrap:wrap; align-items:center; justify-content:center;
+  row-gap:12px; font-size:13.5px; color:rgba(255,255,255,.74);
+}
+.contact-item{ display:inline-flex; align-items:center; gap:5px; padding:0 6px; white-space:nowrap; }
+.contact-item:not(:first-child){ position:relative; }
+.contact-item:not(:first-child)::before{
+  content:'|'; color:rgba(255,255,255,.22); font-weight:300; margin-right:6px;
+}
+.contact-item .c-ico{ font-size:14px; line-height:1; }
+.contact-lines b{ color:var(--gold); font-weight:700; }
+.contact-lines a{ color:rgba(255,255,255,.78); text-decoration:none; transition:color .2s, opacity .2s; }
+.contact-lines a:hover{ color:var(--gold-lt); text-decoration:underline; text-underline-offset:3px; opacity:.9; }
 
 /* ══════════════════ 푸터 ══════════════════ */
 footer{ background:#0A101C; color:rgba(255,255,255,.58); padding:36px 0; font-size:12.5px; }
@@ -1059,13 +1068,11 @@ html.js .reveal.in{ opacity:1; transform:none; }
     </div>
     <p class="contact-note reveal">교육 목적과 예산, 운영 방식도 함께 검토해 드립니다.</p>
     <div class="contact-lines reveal">
-      <span><b>전화</b><a href="tel:01088229896">010-8822-9896</a></span>
-      <span><b>이메일</b><a href="mailto:hseui87@gmail.com">hseui87@gmail.com</a></span>
-      <span><b>Instagram</b><a href="https://www.instagram.com/careerbuilder.dean/" target="_blank" rel="noopener">@careerbuilder.dean</a></span>
-      <span><b>Threads</b><a href="https://www.threads.com/@careerbuilder.dean" target="_blank" rel="noopener">@careerbuilder.dean</a></span>
-    </div>
-    <div class="contact-lines reveal" style="margin-top:10px;">
-      <span><b>Blog</b><a href="https://m.blog.naver.com/careerbuilder_dean" target="_blank" rel="noopener">호텔관광 커리어 노트</a></span>
+      <span class="contact-item"><span class="c-ico" aria-hidden="true">📞</span><b>전화</b><a href="tel:01088229896">010-8822-9896</a></span>
+      <span class="contact-item"><span class="c-ico" aria-hidden="true">📧</span><b>이메일</b><a href="mailto:hseui87@gmail.com">hseui87@gmail.com</a></span>
+      <span class="contact-item"><span class="c-ico" aria-hidden="true">📸</span><b>Instagram</b><a href="https://www.instagram.com/careerbuilder.dean/" target="_blank" rel="noopener">@careerbuilder.dean</a></span>
+      <span class="contact-item"><span class="c-ico" aria-hidden="true">🧵</span><b>Threads</b><a href="https://www.threads.com/@careerbuilder.dean" target="_blank" rel="noopener">@careerbuilder.dean</a></span>
+      <span class="contact-item"><span class="c-ico" aria-hidden="true">✍️</span><b>Blog</b><a href="https://m.blog.naver.com/careerbuilder_dean" target="_blank" rel="noopener">호텔관광 커리어 노트</a></span>
     </div>
   </div>
 </section>
