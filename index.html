@@ -210,7 +210,7 @@ h1.hero-title em::after{
   text-decoration:none; transition:transform .2s, box-shadow .2s, background .2s, border-color .2s, color .2s;
 }
 .btn-gold{ background:var(--gold); color:var(--ink); box-shadow:0 10px 26px -14px rgba(201,162,75,.9); }
-.btn-gold:hover{ transform:translateY(-2px); box-shadow:0 16px 34px -14px rgba(201,162,75,.95); }
+.btn-gold:hover{ background:var(--gold-lt); transform:translateY(-2px); box-shadow:0 16px 34px -14px rgba(201,162,75,.95); }
 .btn-ghost{ border:1px solid rgba(255,255,255,.28); color:rgba(255,255,255,.9); }
 .btn-ghost:hover{ border-color:var(--gold); color:var(--gold); transform:translateY(-2px); }
 
@@ -458,16 +458,29 @@ h1.hero-title em::after{
     var(--ink);
   color:#fff; text-align:center;
 }
-.req-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin:0 auto clamp(36px,5vw,48px); text-align:left; max-width:640px; }
+.req-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin:0 auto clamp(36px,5vw,48px); text-align:left; max-width:860px; }
 .req{
+  display:flex; flex-direction:column; height:100%;
   background:rgba(255,255,255,.045); border:1px solid rgba(255,255,255,.11);
-  border-radius:var(--r); padding:28px 26px; transition:border-color .3s, transform .3s;
+  border-radius:var(--r); padding:30px 28px;
+  transition:border-color .3s, transform .3s, box-shadow .3s;
 }
-.req:hover{ border-color:rgba(201,162,75,.45); transform:translateY(-4px); }
-.req-ico{ font-size:24px; margin-bottom:12px; }
-.req h3{ font-size:16px; font-weight:700; color:#fff; margin-bottom:8px; letter-spacing:-.02em; }
-.req p{ font-size:14.5px; color:rgba(255,255,255,.7); line-height:1.9; }
-.req span{ display:inline-block; margin-top:12px; font-size:11.5px; font-weight:600; color:var(--gold); letter-spacing:.04em; }
+.req:hover{
+  border-color:rgba(201,162,75,.5); transform:translateY(-6px);
+  box-shadow:0 22px 44px -24px rgba(201,162,75,.35);
+}
+.req-ico{ font-size:26px; margin-bottom:14px; }
+.req h3{ font-size:17px; font-weight:700; color:#fff; margin-bottom:12px; letter-spacing:-.02em; }
+.req-list{ list-style:none; padding:0; margin:0; }
+.req-list li{
+  position:relative; padding-left:15px;
+  font-size:16px; font-weight:400; color:rgba(255,255,255,.75); line-height:1.85;
+}
+.req-list li::before{
+  content:''; position:absolute; left:0; top:.82em; width:4px; height:4px;
+  border-radius:50%; background:var(--gold);
+}
+.req span{ display:block; margin-top:auto; padding-top:16px; border-top:1px solid rgba(255,255,255,.1); font-size:12px; font-weight:600; color:var(--gold); letter-spacing:.03em; }
 .contact-btns{ display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-bottom:14px; }
 .contact-note{ text-align:center; font-size:13px; color:rgba(255,255,255,.5); margin-bottom:26px; }
 .contact-lines{
@@ -1047,26 +1060,63 @@ html.js .reveal.in{ opacity:1; transform:none; }
     <div class="sec-head center reveal">
       <span class="eyebrow">Lecture &amp; Consulting</span>
       <h2 class="sec-title">강의·자문이 필요한 현장에<br><b>함께합니다</b></h2>
-      <p class="sec-lead">강의 주제, 대상, 희망 일정과 장소를 알려주시면 현장에 바로 적용할 수 있는 맞춤형 프로그램을 함께 설계합니다.</p>
+      <p class="sec-lead">강의 주제와 대상, 일정 및 장소를 알려주시면 현장에 바로 적용할 수 있는 맞춤형 강의와 자문 프로그램을 함께 설계합니다.</p>
     </div>
     <div class="req-grid">
       <article class="req reveal">
         <div class="req-ico" aria-hidden="true">🎓</div>
         <h3>대학·교육기관</h3>
-        <p>호텔관광 진로설계 · 서비스·브랜딩 · 취업역량 강화</p>
+        <ul class="req-list">
+          <li>호텔관광 커리어 교육</li>
+          <li>진로설계</li>
+          <li>취업역량 강화</li>
+          <li>교직원 연수</li>
+          <li>특강 및 진로 프로그램</li>
+        </ul>
         <span>대학 특강 · 교직원 연수 · 진로 프로그램</span>
       </article>
       <article class="req reveal">
         <div class="req-ico" aria-hidden="true">🌱</div>
         <h3>공공·지원사업</h3>
-        <p>청년 재취업 · 직무 전환 교육 · 관광·산업 연계 프로그램</p>
-        <span>교육 기획 · 운영 자문 · 현장 맞춤 강의</span>
+        <ul class="req-list">
+          <li>신중년 재취업</li>
+          <li>청년 취업</li>
+          <li>직무전환 교육</li>
+          <li>관광산업 연계 프로그램</li>
+          <li>맞춤형 교육 운영</li>
+        </ul>
+        <span>교육 기획 · 운영 자문 · 맞춤형 강의</span>
+      </article>
+      <article class="req reveal">
+        <div class="req-ico" aria-hidden="true">🤝</div>
+        <h3>기업 강의</h3>
+        <ul class="req-list">
+          <li>CS 서비스 교육</li>
+          <li>고객응대</li>
+          <li>VOC 대응</li>
+          <li>조직 커뮤니케이션</li>
+          <li>서비스 마인드</li>
+        </ul>
+        <span>기업교육 · CS 교육 · 서비스 혁신</span>
+      </article>
+      <article class="req reveal">
+        <div class="req-ico" aria-hidden="true">🏨</div>
+        <h3>호텔·관광 실무 교육</h3>
+        <ul class="req-list">
+          <li>객실</li>
+          <li>프론트</li>
+          <li>컨시어지</li>
+          <li>라운지</li>
+          <li>호텔 운영 실무</li>
+          <li>관광 서비스</li>
+        </ul>
+        <span>호텔 실무 · 관광 서비스 · 현장 노하우</span>
       </article>
     </div>
     <div class="contact-btns reveal">
-      <a href="mailto:hseui87@gmail.com?subject=%5B%EA%B0%95%EC%9D%98%C2%B7%EC%BB%A8%EC%84%A4%ED%8C%85%20%EB%AC%B8%EC%9D%98%5D%20%EB%94%98%EC%8C%A4%20%ED%99%8D%EC%83%81%EC%9D%98%20%EA%B0%95%EC%82%AC%EB%8B%98%EA%BB%98&body=%C2%B7%20%EA%B8%B0%EA%B4%80%EB%AA%85%3A%0A%C2%B7%20%EA%B0%95%EC%9D%98%20%EC%A3%BC%EC%A0%9C%3A%0A%C2%B7%20%EA%B5%90%EC%9C%A1%20%EB%8C%80%EC%83%81%20%C2%B7%20%EC%9D%B8%EC%9B%90%3A%0A%C2%B7%20%ED%9D%AC%EB%A7%9D%20%EC%9D%BC%EC%A0%95%20%C2%B7%20%EC%8B%9C%EA%B0%84%3A%0A%C2%B7%20%EC%9E%A5%EC%86%8C%3A%0A%C2%B7%20%EC%97%B0%EB%9D%BD%EC%B2%98%3A%0A" class="btn btn-gold">강의·자문 문의하기</a>
+      <a href="mailto:hseui87@gmail.com?subject=%5B%EA%B0%95%EC%9D%98%C2%B7%EC%BB%A8%EC%84%A4%ED%8C%85%20%EB%AC%B8%EC%9D%98%5D%20%EB%94%98%EC%8C%A4%20%ED%99%8D%EC%83%81%EC%9D%98%20%EA%B0%95%EC%82%AC%EB%8B%98%EA%BB%98&body=%C2%B7%20%EA%B8%B0%EA%B4%80%EB%AA%85%3A%0A%C2%B7%20%EA%B0%95%EC%9D%98%20%EC%A3%BC%EC%A0%9C%3A%0A%C2%B7%20%EA%B5%90%EC%9C%A1%20%EB%8C%80%EC%83%81%20%C2%B7%20%EC%9D%B8%EC%9B%90%3A%0A%C2%B7%20%ED%9D%AC%EB%A7%9D%20%EC%9D%BC%EC%A0%95%20%C2%B7%20%EC%8B%9C%EA%B0%84%3A%0A%C2%B7%20%EC%9E%A5%EC%86%8C%3A%0A%C2%B7%20%EC%97%B0%EB%9D%BD%EC%B2%98%3A%0A" class="btn btn-gold">강의 및 자문 문의하기</a>
     </div>
-    <p class="contact-note reveal">교육 목적과 예산, 운영 방식도 함께 검토해 드립니다.</p>
+    <p class="contact-note reveal">교육 목적과 대상에 맞는 프로그램을 함께 기획해드립니다.</p>
     <div class="contact-lines reveal">
       <span class="contact-item"><span class="c-ico" aria-hidden="true">📞</span><b>전화</b><a href="tel:01088229896">010-8822-9896</a></span>
       <span class="contact-item"><span class="c-ico" aria-hidden="true">📧</span><b>이메일</b><a href="mailto:hseui87@gmail.com">hseui87@gmail.com</a></span>
