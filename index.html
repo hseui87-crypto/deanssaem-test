@@ -253,10 +253,10 @@ h1.hero-title em::after{
 /* ══════════════════ ABOUT ══════════════════ */
 .about-grid{ display:grid; grid-template-columns:.8fr 1.2fr; gap:clamp(32px,5vw,64px); align-items:center; }
 .about-visual{ position:relative; text-align:center; }
-.about-visual img{ width:min(320px,100%); margin:0 auto; border-radius:50%; }
+.about-visual img{ width:min(320px,100%); margin:0 auto; border-radius:var(--r); box-shadow:var(--shadow); display:block; }
 .about-visual::before{
   content:''; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
-  width:calc(min(320px,100%) + 32px); aspect-ratio:1; border-radius:50%;
+  width:calc(min(320px,100%) + 32px); aspect-ratio:1; border-radius:var(--r);
   border:1px dashed rgba(201,162,75,.45);
 }
 .about-sign{
