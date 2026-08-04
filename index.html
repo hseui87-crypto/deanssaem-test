@@ -133,12 +133,12 @@ h2.sec-title b{ color:var(--gold); font-weight:900; }
 header.nav{
   position:fixed; inset:0 0 auto 0; z-index:200;
   height:66px;
-  background:rgba(14,23,41,.72);
+  background:rgba(14,23,41,.96);
   backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
   border-bottom:1px solid rgba(201,162,75,.16);
   transition:background .3s, height .3s;
 }
-header.nav.scrolled{ background:rgba(14,23,41,.96); height:58px; }
+header.nav.scrolled{ background:rgba(14,23,41,.98); height:58px; }
 .nav-in{ height:100%; display:flex; align-items:center; justify-content:space-between; gap:20px; }
 .logo{
   display:flex; align-items:center; gap:10px;
@@ -185,7 +185,7 @@ header.nav.scrolled{ background:rgba(14,23,41,.96); height:58px; }
     radial-gradient(900px 520px at 82% 18%, rgba(201,162,75,.16), transparent 62%),
     radial-gradient(700px 500px at 5% 88%, rgba(31,47,77,.9), transparent 60%),
     var(--ink);
-  color:#fff; padding:calc(66px + clamp(48px,7vw,84px)) 0 clamp(56px,7vw,84px);
+  color:#fff; padding:calc(66px + clamp(28px,4vw,48px)) 0 clamp(56px,7vw,84px);
   overflow:hidden;
 }
 #hero::before{
