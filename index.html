@@ -133,12 +133,11 @@ h2.sec-title b{ color:var(--gold); font-weight:900; }
 header.nav{
   position:fixed; inset:0 0 auto 0; z-index:200;
   height:66px;
-  background:rgba(14,23,41,.96);
-  backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  background:#0E1729;
   border-bottom:1px solid rgba(201,162,75,.16);
-  transition:background .3s, height .3s;
+  transition:height .3s;
 }
-header.nav.scrolled{ background:rgba(14,23,41,.98); height:58px; }
+header.nav.scrolled{ height:58px; }
 .nav-in{ height:100%; display:flex; align-items:center; justify-content:space-between; gap:20px; }
 .logo{
   display:flex; align-items:center; gap:10px;
@@ -542,9 +541,9 @@ footer{ background:#0A101C; color:rgba(255,255,255,.68); padding:36px 0; font-si
 .totop{
   position:fixed; right:22px; bottom:22px; z-index:150;
   width:46px; height:46px; border-radius:50%; border:1px solid rgba(201,162,75,.5);
-  background:rgba(14,23,41,.92); color:var(--gold); font-size:17px; cursor:pointer;
+  background:rgba(14,23,41,.97); color:var(--gold); font-size:17px; cursor:pointer;
   display:grid; place-items:center; opacity:0; visibility:hidden;
-  transform:translateY(12px); transition:.3s; backdrop-filter:blur(8px);
+  transform:translateY(12px); transition:.3s;
 }
 .totop.show{ opacity:1; visibility:visible; transform:translateY(0); }
 .totop:hover{ background:var(--gold); color:var(--ink); }
@@ -575,7 +574,7 @@ html.js .reveal.in{ opacity:1; transform:none; }
   .nav-menu{
     position:fixed; inset:66px 0 auto 0;
     flex-direction:column; align-items:stretch; gap:0;
-    background:rgba(14,23,41,.985); backdrop-filter:blur(16px);
+    background:#0E1729;
     padding:8px 24px 24px; border-bottom:1px solid rgba(201,162,75,.2);
     max-height:0; overflow:hidden; transition:max-height .35s ease, padding .35s;
   }
