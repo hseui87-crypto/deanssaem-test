@@ -560,7 +560,7 @@ footer{ background:#0A101C; color:rgba(255,255,255,.68); padding:36px 0; font-si
 /* ══════════════════ 스크롤 등장 ══════════════════ */
 /* JS가 없거나 실패해도 내용이 사라지지 않도록, 숨김은 html.js 일 때만 적용 */
 .reveal{ opacity:1; transform:none; }
-html.js .reveal{ opacity:0; transform:translateY(24px); transition:opacity .7s var(--ease), transform .7s var(--ease); }
+html.js .reveal{ opacity:0; transform:translateY(10px); transition:opacity .35s var(--ease), transform .35s var(--ease); }
 html.js .reveal.in{ opacity:1; transform:none; }
 
 /* ══════════════════ 반응형 ══════════════════ */
@@ -1245,11 +1245,11 @@ html.js .reveal.in{ opacity:1; transform:none; }
         var el = en.target;
         var sibs = [].slice.call(el.parentNode.children).filter(function(n){ return n.classList.contains('reveal'); });
         var idx = sibs.indexOf(el);
-        el.style.transitionDelay = (idx > 0 ? Math.min(idx, 5) * 90 : 0) + 'ms';
+        el.style.transitionDelay = (idx > 0 ? Math.min(idx, 5) * 60 : 0) + 'ms';
         el.classList.add('in');
         io.unobserve(el);
       });
-    }, { threshold:0.12, rootMargin:'0px 0px -40px 0px' });
+    }, { threshold:0, rootMargin:'0px 0px 200px 0px' });
 
     // 첫 화면에 이미 보이는 요소는 즉시 표시 (관찰기가 늦게 도는 환경 대비)
     items.forEach(function(el){
